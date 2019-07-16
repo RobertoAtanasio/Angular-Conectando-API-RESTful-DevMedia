@@ -3,16 +3,30 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ErrorMsgComponent } from './compartilhado/error-msg/error-msg.component';
+import { ListaLembreteComponent } from './paginas/lista-lembrete/lista-lembrete.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormLembreteComponent } from './compartilhado/form-lembrete/form-lembrete.component';
+import { FormsModule } from '@angular/forms';
+import { CriarLembreteComponent } from './paginas/criar-lembrete/criar-lembrete.component';
+import { EditarLembreteComponent } from './paginas/editar-lembrete/editar-lembrete.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ErrorMsgComponent,
+    ListaLembreteComponent,
+    FormLembreteComponent,
+    CriarLembreteComponent,
+    EditarLembreteComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ErrorMsgComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
